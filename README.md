@@ -7,3 +7,5 @@ We can now access my React Application using http://localhost:7775.
 - git clone the repository onto local 
 - run docker compose up --build
 - go to http://localhost:7775
+
+** Make sure docker desktop is running by using docker desktop start
