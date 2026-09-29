@@ -1,0 +1,26 @@
+
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: tabios_christopher_coding_assignment11
+
+    working_dir: /tabios_christopher_site
+
+    ports:
+      - "7775:3000"
+
+    volumes:
+      - .:/tabios_christopher_site
+      - /tabios_christopher_site/node_modules
+
+    environment:
+      HOST: "0.0.0.0"
+      CHOKIDAR_USEPOLLING: "true"
+      WATCHPACK_POLLING: "true"
+      WDS_SOCKET_PORT: "7775"
+
+    stdin_open: true
+    tty: true
